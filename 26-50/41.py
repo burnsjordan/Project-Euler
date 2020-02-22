@@ -20,21 +20,14 @@ def is_pan(n,d):
             pan = False
     return pan
 
-m = 0
+i = 10000001
 
-p_list = []
+done = False
 
-i = 3
-
-while i < 10000000:
-    if(is_prime(i)):
-        p_list.append(i)
-    i += 2
-
-for i in p_list:
-    for j in range(4,10):
-        if(is_pan(i,j)):
-            if(i > m):
-                m = i
-
-print(m)
+while i > 6000000:
+    if(not done and is_prime(i)):
+        for j in range(4,10):
+            if(is_pan(i,j)):
+                print(i)
+                done = True
+    i -= 2
