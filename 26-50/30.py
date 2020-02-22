@@ -1,6 +1,6 @@
 def is_sum_of_digits(n):
     s = 0
-    for i in str(n):
+    for i in str(n):    
         s += int(i)**5
     if(s == n):
         return True
